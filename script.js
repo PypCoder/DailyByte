@@ -4,6 +4,7 @@ function showError(elementId, message) {
   ).innerHTML = `<div class="error"><i class="fas fa-exclamation-triangle me-1"></i>${message}</div>`;
 }
 
+// Get user location based on IP
 async function getUserLocation() {
   try {
     const response = await fetch("http://127.0.0.1:5000/api/user/location");
@@ -33,6 +34,7 @@ async function getUserLocation() {
   }
 }
 
+// Get current time
 async function getCurrentTime() {
   try {
     const dateTime = new Date();
@@ -50,6 +52,7 @@ async function getCurrentTime() {
   }
 }
 
+// Get weather data
 async function getWeather() {
   try {
     const response = await fetch("http://127.0.0.1:5000/api/weather");
