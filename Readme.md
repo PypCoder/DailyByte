@@ -18,15 +18,17 @@ DailyByte is a full-stack web app built using Flask, HTML, CSS, and JavaScript. 
 
 | Member ID             | Role               | Contributions                               |
 |-----------------------|--------------------|---------------------------------------------|
-| `Muhammad Asad Ullah` | Project Lead       |  |
-| `TheCodeEnvoy`        | Frontend Developer |  |
-| `CodWizAlly`          | Backend Developer  |  |
+| `Muhammad Asad Ullah` | Project Lead       | Init repo, final merge, conflict resolution |
+| `TheCodeEnvoy`        | Frontend Developer | UI enhancements, Bootstrap, Issue raised    |
+| `CodWizAlly`          | Backend Developer  | Currency API, logs, bug fix, conflict       |
 
 ## 🖼️ Screenshots
 
+![Screenshot](screenshot.png)
 
 ## 🛠️ How to Run
 
 ```bash
 pip install flask, flask_cors
+run index.html
 python run.py
