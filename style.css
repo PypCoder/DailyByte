@@ -1,0 +1,215 @@
+:root {
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --success-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --warning-gradient: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  --dark-bg: #1a1a2e;
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --text-primary: #2c3e50;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  background: var(--primary-gradient);
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-primary);
+}
+
+.header {
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  color: white;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.card {
+  background: var(--card-bg);
+  border: none;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  margin-bottom: 1.5rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  border: none;
+  border-radius: 20px 20px 0 0;
+  padding: 1.25rem;
+  font-weight: 600;
+}
+
+.location-card .card-header {
+  background: var(--primary-gradient);
+  color: white;
+}
+
+.weather-card .card-header {
+  background: var(--success-gradient);
+  color: white;
+}
+
+.currency-card .card-header {
+  background: var(--warning-gradient);
+  color: white;
+}
+
+.content-card .card-header {
+  background: var(--secondary-gradient);
+  color: white;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.loading {
+  text-align: center;
+  color: #6c757d;
+  font-style: italic;
+}
+
+.error {
+  color: #dc3545;
+  font-size: 0.9rem;
+}
+
+.weather-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.temperature {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.quote-text {
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.quote-author {
+  text-align: right;
+  font-weight: 600;
+  color: #6c757d;
+}
+
+.currency-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.currency-code {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.currency-rate {
+  font-weight: 700;
+  color: #28a745;
+}
+
+.fact-text,
+.joke-text {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.activity-suggestion {
+  background: rgba(103, 126, 234, 0.1);
+  border-left: 4px solid #667eea;
+  padding: 1rem;
+  border-radius: 0 10px 10px 0;
+}
+
+.time-display {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.pet-image {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin: 0 auto;
+  display: block;
+}
+
+.refresh-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--primary-gradient);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.refresh-btn:hover {
+  transform: scale(1.1);
+  color: white;
+}
+
+.refresh-btn.spinning {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .container-fluid {
+    padding: 0 10px;
+  }
+
+  .card {
+    margin-bottom: 1rem;
+  }
+
+  .temperature {
+    font-size: 2rem;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+}
