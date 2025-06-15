@@ -24,7 +24,7 @@ DailyByte is a full-stack web app built using Flask, HTML, CSS, and JavaScript. 
 
 ## 🖼️ Screenshots
 
-![Screenshot](screenshot.png)
+![Daily-Byte-Dashboard](https://github.com/user-attachments/assets/2bc2b3b8-0815-42a0-aeb4-146b5a1051cc)
 
 ## 🛠️ How to Run
 
