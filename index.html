@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Byte+</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h1><i class="fas fa-chart-line me-2"></i>Daily Byte+</h1>
+            <p class="text-white-50 mb-0">
+              Your daily dose of information and inspiration
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Location & Time -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card location-card">
+            <div class="card-header">
+              <i class="fas fa-map-marker-alt me-2"></i>Location & Time:
+            </div>
+            <div class="card-body">
+              <div id="location-content" class="loading">
+                <i class="fas fa-spinner fa-spin"></i> Loading location...
+              </div>
+              <hr />
+              <div id="time-content" class="time-display loading">
+                <i class="fas fa-clock"></i> Loading time...
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Weather -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card weather-card">
+            <div class="card-header">
+              <i class="fas fa-cloud-sun me-2"></i>Weather:
+            </div>
+            <div class="card-body text-center">
+              <div id="weather-content" class="loading">
+                <i class="fas fa-spinner fa-spin"></i> Loading weather...
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Currency Exchange -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card currency-card">
+            <div class="card-header">
+              <i class="fas fa-dollar-sign me-2"></i>Currency Rates (USD):
+            </div>
+            <div class="card-body">
+              <div id="currency-content" class="loading">
+                <i class="fas fa-spinner fa-spin"></i> Loading rates...
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quote of the Day -->
+        <div class="col-md-6 col-lg-6">
+          <div class="card content-card">
+            <div class="card-header">
+              <i class="fas fa-quote-left me-2"></i>Quote of the Day:
+            </div>
+            <div class="card-body">
+              <div id="quote-content" class="loading">
+                <i class="fas fa-spinner fa-spin"></i> Loading quote...
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fun Fact -->
+        <div class="col-md-6 col-lg-6">
+          <div class="card content-card">
+            <div class="card-header">
+              <i class="fas fa-lightbulb me-2"></i>Fun Fact:
+            </div>
+            <div class="card-body">
+              <div id="fact-content" class="loading">
+                <i class="fas fa-spinner fa-spin"></i> Loading fact...
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Joke -->
+        <div class="col-md-6 col-lg-6">
+          <div class="card content-card">
+            <div class="card-header">
+              <i class="fas fa-laugh me-2"></i>Daily Joke:
+            </div>
+            <div class="card-body">
+              <div id="joke-content" class="loading">
+                <i class="fas fa-spinner fa-spin"></i> Loading joke...
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Activity Suggestion -->
+        <div class="col-md-6 col-lg-6">
+          <div class="card content-card">
+            <div class="card-header">
+              <i class="fas fa-running me-2"></i>Activity Suggestion:
+            </div>
+            <div class="card-body">
+              <div id="activity-content" class="loading">
+                <i class="fas fa-spinner fa-spin"></i> Loading activity...
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pet Images -->
+        <div class="col-md-6 col-lg-6">
+          <div class="card content-card">
+            <div class="card-header">
+              <i class="fas fa-paw me-2"></i>Daily Pet:
+            </div>
+            <div class="card-body text-center">
+              <div id="pet-content" class="loading">
+                <i class="fas fa-spinner fa-spin"></i> Loading cute pets...
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Refresh Button -->
+    <button
+      class="refresh-btn"
+      onclick="refreshAllData()"
+      title="Refresh All Data"
+    >
+      <i class="fas fa-sync-alt"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
